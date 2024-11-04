@@ -3,6 +3,7 @@ from repositories.usuario_repository import UsuarioRepository
 from config.database import Session
 import os
 
+
 # Cores de texto
 RED = "\033[31m"
 GREEN = "\033[32m"
@@ -32,6 +33,12 @@ def menu():
     print(f"{PINK} | 6 |     PARAR O PROGRAMA       |{RESET}")
     print(f"{CIANO} |================================|{RESET}")
 
+def create():
+    pass
+
+def update():
+    pass
+
 def main():
     session = Session()
     repository = UsuarioRepository(session)
@@ -44,43 +51,31 @@ def main():
 
         match(opcao):
             case 1:
-                print("\n - Adicionando usuário -")
-                nome = input("Digite o seu nome: ")
-                email = input("Digite o seu email: ")
-                senha = input("Digite o seu senha: ")
-
-                service.criar_usuario(nome=nome, email=email, senha=senha)
-                break
-
+                service.criar_usuario()
+                input("Aperte qualquer tecla para continuar!")
+            
             case 2:
-                print("\n - Pesquisa por email -")
-                email = input("Digite o email desejado: ")
-                lista_email = repository.pesquisar_usuario_por_email(email=email)
-                for usuario in lista_email:
-                    print(f"Nome: {usuario.nome} - Email: {usuario.email} - Senha: {usuario.senha}")
-                break
+                service.atualizar_usuario()
+                input("Aperte qualquer tecla para continuar!")
 
             case 3:
-                print("\n - Atualização de dados -")
-                break
+                service.excluir_usuario()
+                input("Aperte qualquer tecla para continuar!")
 
             case 4:
-                print("\n - Excluir usuário -")
-                nome = input("Digite o nome: ")
-                email = input("Digite o email: ")
-                senha = input("Digite o senha: ")
-
-                repository.excluir_usuario()
-                break
+                service.pesquisar_usuario_unico()
+                input("Aperte qualquer tecla para continuar!")
 
             case 5:
-                print("\n - Exibir todos os usuários cadastrados -")
-                lista_usuarios = service.listar_todos_usuarios()
-                for usuario in lista_usuarios:
-                    print(f"Nome: {usuario.nome} - Email: {usuario.email} - Senha: {usuario.senha}")
-                break
+                service.listar_todos_usuarios()
+                input("Aperte qualquer tecla para continuar!")
 
-            case 0:
+            case 6:
+                input("Aperte qualquer tecla para continuar!")
+                print("Programa encerrado!")
+
+            case _:
+                print("Opção selecionada inválida!")
                 break
 
 if __name__ == "__main__":

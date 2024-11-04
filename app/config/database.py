@@ -7,7 +7,7 @@ db_user = "user"
 db_password = "user_password"
 db_host = "localhost"
 db_port = "3306"
-db_name = "banquetola"
+db_name = "atividade_I"
 
 # URL de conexão para BD MySQL
 # DATABASE_URL = f"mysql+pymysql://usuario:senha@host:porta/nome_bd"
