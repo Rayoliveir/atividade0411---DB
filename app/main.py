@@ -1,25 +1,43 @@
-from services.usuario_service import UsuarioService
+from service.usuario_service import UsuarioService
 from repositories.usuario_repository import UsuarioRepository
 from config.database import Session
 import os
+
+# Cores de texto
+RED = "\033[31m"
+GREEN = "\033[32m"
+YELLOW = "\033[33m"
+BLUE = "\033[34m"
+ORANGE = "\033[38;5;214m"
+CIANO = "\033[96m"
+PINK = "\033[35m"
+RESET = "\033[0m"
+
+def limpa_tela():
+    os.system("cls || clear")
+    print(f" {CIANO}*==== BEM VINDO A BANQUETOLA ====*{RESET}\n")
+
+
+def menu():
+    limpa_tela()
+    print(f"{CIANO} |================================|{RESET}")
+    print(f"{CIANO} |       MENU DE OPÇÕES           |{RESET}")
+    print(f"{CIANO} |================================|{RESET}")
+    print(f"{GREEN} | 1 | CREATE - Salvar            |{RESET}")
+    print(f"{BLUE} | 2 | UPDATE  - Atualizar        |{RESET}")
+    print(f"{RED} | 3 | DELETE - Deletar           |{RESET}")
+    print(f"{ORANGE} | 4 | ONLY READ - Consulta única |{RESET}")
+    print(f"{YELLOW} | 5 | ALL READ - Consulta geral  |{RESET}")
+    print(f"{CIANO} |================================|{RESET}")
+    print(f"{PINK} | 6 |     PARAR O PROGRAMA       |{RESET}")
+    print(f"{CIANO} |================================|{RESET}")
 
 def main():
     session = Session()
     repository = UsuarioRepository(session)
     service = UsuarioService(repository)
-
+    
     # Solicitando dados para o usuário
-
-    # MENU DE OPÇÕES
-    def menu():
-        print("\t - MENU DE OPÇÕES - ")
-        print("""  \t1 - Adicionar usuário. 
-            2 - Pesquisar um usuário. 
-            3 - Atualizar dados de um usuário.
-            4 - Excluir usuário.
-            5 - Exibir todos os usuários cadastrados
-            0 - Sair.""")
-        
     while True:
         menu()
         opcao = int(input("\nDigite a opção desejada: "))
