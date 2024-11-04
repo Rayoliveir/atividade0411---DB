@@ -2,7 +2,7 @@ from service.usuario_service import UsuarioService
 from repositories.usuario_repository import UsuarioRepository
 from config.database import Session
 import os
-
+import time
 
 # Cores de texto
 RED = "\033[31m"
@@ -72,6 +72,7 @@ def main():
 
             case 6:
                 input("Aperte qualquer tecla para continuar!")
+                time.sleep(5)
                 print("Programa encerrado!")
 
             case _:
