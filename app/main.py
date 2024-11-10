@@ -30,7 +30,7 @@ def menu():
     print(f"{ORANGE} | 4 | ONLY READ - Consulta única |{RESET}")
     print(f"{YELLOW} | 5 | ALL READ - Consulta geral  |{RESET}")
     print(f"{CIANO} |================================|{RESET}")
-    print(f"{PINK} | 6 |     PARAR O PROGRAMA       |{RESET}")
+    print(f"{PINK} | 0 |     PARAR O PROGRAMA       |{RESET}")
     print(f"{CIANO} |================================|{RESET}")
 
 def create():
@@ -70,7 +70,7 @@ def main():
                 service.listar_todos_usuarios()
                 input("Aperte qualquer tecla para continuar!")
 
-            case 6:
+            case 0:
                 input("Aperte qualquer tecla para continuar!")
                 time.sleep(5)
                 print("Programa encerrado!")
