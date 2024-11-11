@@ -4,13 +4,14 @@
 - 04/11/2024
 
 ## Objetivo
-Criar um CRUD  para um usuario:
+Criar um CRUD  para um usuario com validação dos dados informaddos:
+
 - Create (Criar usuario)
 - Read (Exibir usuario)
 - Update (Atualizar usuario)
 - Delete (Deletar usuario)
 
-No arquivo principal, crie um menu onde  seja possivel escolher a opção desejada.
+No arquivo principal, crie um menu onde seja possivel escolher a ação desejada.
 
 """
     *== SISTEMA ==*
@@ -28,6 +29,11 @@ Os dados precisam ser salvos no banco de dados.
 
 ## Tecnologias:
 - ORM: SQLAlchemy
+- Versionamento: Git
 - Banco de dados: MySQL
+- Containerização: Docker
+- testes automatizados: Pytest
 - Linguagem de programaçaõ: Python
 - Orquestração de conteineres: Docker Compose
+
+## Observações
