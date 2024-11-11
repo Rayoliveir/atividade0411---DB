@@ -1,6 +1,5 @@
 from models.usuario_model import Usuario
 from repositories.usuario_repository import UsuarioRepository
-import time
 
 class UsuarioService:
     def __init__(self, repository: UsuarioRepository):
@@ -13,14 +12,7 @@ class UsuarioService:
             email = input("Digite o seu email: ")
             senha = input("Digite o seu senha: ")
             usuario = Usuario(nome=nome, email=email, senha=senha)
-
-            def validar_nome(nome):
-                if not nome:
-                    raise ValueError("O campo nome não pode estar vazio!")
-                return nome
             
-
-
             cadastrado = self.repository.pesquisar_usuario_por_email(usuario.email)
 
             if cadastrado:
