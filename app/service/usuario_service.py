@@ -14,6 +14,13 @@ class UsuarioService:
             senha = input("Digite o seu senha: ")
             usuario = Usuario(nome=nome, email=email, senha=senha)
 
+            def validar_nome(nome):
+                if not nome:
+                    raise ValueError("O campo nome não pode estar vazio!")
+                return nome
+            
+
+
             cadastrado = self.repository.pesquisar_usuario_por_email(usuario.email)
 
             if cadastrado:

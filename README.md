@@ -1,9 +1,11 @@
 # Atividade
 
 ## Data realização
+
 - 04/11/2024
 
 ## Objetivo
+
 Criar um CRUD  para um usuario com validação dos dados informaddos:
 
 - Create (Criar usuario)
@@ -28,6 +30,7 @@ Informe a opção desejada:
 Os dados precisam ser salvos no banco de dados.
 
 ## Tecnologias:
+
 - ORM: SQLAlchemy
 - Versionamento: Git
 - Banco de dados: MySQL
@@ -37,3 +40,8 @@ Os dados precisam ser salvos no banco de dados.
 - Orquestração de conteineres: Docker Compose
 
 ## Observações
+
+- Os testes devem verificar os dados informados.
+- As exceções deve tratadas e exibidas para o usuário sem parar a execução do programa.
+- Utilize branches para versionamento.
+- Segue em link do repositório como referência
