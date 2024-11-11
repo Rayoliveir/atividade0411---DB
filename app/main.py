@@ -1,8 +1,13 @@
-from service.usuario_service import UsuarioService
-from repositories.usuario_repository import UsuarioRepository
-from config.database import Session
+import sys
 import os
 import time
+
+#Adiciona o diretório 'app' como diretório padrão
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__),'..')))
+
+from app.service.usuario_service import UsuarioService
+from app.repositories.usuario_repository import UsuarioRepository
+from app.config.database import Session
 
 # Cores de texto
 RED = "\033[31m"

@@ -1,5 +1,5 @@
 import pytest
-from models.usuario_model import Usuario
+from app.models.usuario_model import Usuario
 
 @pytest.fixture
 def usuario_valido():
