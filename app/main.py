@@ -38,12 +38,6 @@ def menu():
     print(f"{PINK} | 0 |     PARAR O PROGRAMA       |{RESET}")
     print(f"{CIANO} |================================|{RESET}")
 
-def create():
-    pass
-
-def update():
-    pass
-
 def main():
     session = Session()
     repository = UsuarioRepository(session)
