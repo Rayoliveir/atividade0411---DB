@@ -92,4 +92,4 @@ class UsuarioService:
         lista_usuarios = self.repository.listar_todos_usuarios()
         print("\nListando todos os usuarios")
         for usuario in lista_usuarios:
-            print(f"\nNome: {usuario.nome} \nE-mail: {usuario.email} \nSenha: {usuario.senha}")
+            print(f"\nID: {usuario.id} \nNome: {usuario.nome} \nE-mail: {usuario.email} \nSenha: {usuario.senha}")
